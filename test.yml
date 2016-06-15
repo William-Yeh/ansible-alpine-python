@@ -1,0 +1,11 @@
+- hosts: all
+  become: True
+  gather_facts: false
+  tasks:
+    - include: 'tasks/main.yml'
+
+    - debug: var=ansible_distribution
+
+  vars_files:
+    - 'defaults/main.yml'
+

@@ -1,0 +1,20 @@
+---
+# file: tasks/main.yml
+# Top-level installer.
+#
+
+
+- include: fix-alpine-repo.yml
+  when: alpine_python_fix_repo
+
+
+- name: install Python 2 for Alpine
+  raw: apk add python --no-cache
+  when: alpine_python_2_enabled
+
+- name: install Python 3 for Alpine
+  raw: apk add python3 --no-cache
+  when: alpine_python_3_enabled
+
+- name: gather facts for Alpine
+  setup: filter="*"

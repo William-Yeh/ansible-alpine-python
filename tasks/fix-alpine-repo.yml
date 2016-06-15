@@ -1,0 +1,15 @@
+---
+# file: tasks/main.yml
+# Fix buggy Alpine repo.
+#
+
+- name: add more repo sources
+  raw: echo '{{ item }}' | tee -a /etc/apk/repositories
+  with_items: '{{ alpine_python_repo }}'
+
+#- name: update Alpine repo cache
+#  raw: apk update
+#  ignore_errors: true
+
+- name: choose a fastest and reliable mirror
+  raw: setup-apkrepos -f

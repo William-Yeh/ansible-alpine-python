@@ -1,0 +1,20 @@
+---
+# nodejs/meta/main.yml
+
+galaxy_info:
+    author: williamyeh
+    description: Install Python 2/3 runtime under Alpine Linux
+    license: MIT
+    min_ansible_version: 2.0
+
+    platforms:
+        - name: Alpine
+          versions:
+              - all
+
+    galaxy_tags:
+        - development
+        - python
+        - alpine
+
+dependencies: []

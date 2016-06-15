@@ -1,0 +1,17 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker info
+    - docker version
+
+    - docker build  -f test/Dockerfile  -t alpine_python   .
+
+test:
+  override:
+    - docker run -i alpine_python   > result
+
+    - echo "==> Validating the test results..."
+    - sh -c "[ -s result ]"

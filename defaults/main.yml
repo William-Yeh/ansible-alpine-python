@@ -1,0 +1,27 @@
+---
+
+#
+# variables needed to be defined in user's playbook
+#
+
+
+
+#
+# user-configurable defaults
+#
+
+alpine_python_2_enabled: true    # install Python 2?  default = yes
+
+alpine_python_3_enabled: false   # install Python 3?  default = no
+
+
+alpine_python_fix_repo: false    # fix Alpine repo list?  default = no
+
+alpine_python_repo:
+  - http://dl-cdn.alpinelinux.org/alpine/latest-stable/main/
+  - http://nl.alpinelinux.org/alpine/latest-stable/main/
+  - http://dl-2.alpinelinux.org/alpine/latest-stable/main/
+  - http://dl-3.alpinelinux.org/alpine/latest-stable/main/
+  - http://dl-4.alpinelinux.org/alpine/latest-stable/main/
+  - http://dl-5.alpinelinux.org/alpine/latest-stable/main/
+  - http://dl-6.alpinelinux.org/alpine/latest-stable/main/
