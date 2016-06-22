@@ -2,7 +2,8 @@ Vagrant.configure(2) do |config|
 
     # main & default: normal OS series...
     config.vm.define "main", primary: true do |node|
-        node.vm.box = "maier/alpine-3.3.1-x86_64"
+        node.vm.box = "maier/alpine-3.4-x86_64"
+        #node.vm.box = "maier/alpine-3.3.1-x86_64"
 
         node.vm.synced_folder '.', '/vagrant', disabled: true
 
